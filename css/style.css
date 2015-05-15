@@ -1,0 +1,154 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Default Styles 
+--------------------------------------------------------------------*/
+
+.clearfix {
+	clear: both;
+}
+
+.wrap {
+	width: 940px;
+	margin: 4em auto;
+}
+
+nav {
+	background: -webkit-gradient(linear, center top, center bottom, from(#fff), to(#F8F8F8));
+	background-image: linear-gradient(#fff, #F8F8F8);
+	border-radius: 10px;
+	box-shadow: 0px 0px 4px 2px rgba(0,0,0,0.4);
+	position: fixed;
+	width:90%;
+	top:0;
+	left:5%;
+	z-index:1000;
+}
+
+.menu{
+	padding-left: 0px;
+	margin:0px;
+	margin-bottom: 20px;
+	vertical-align: middle;
+	position: relative;
+}
+
+.menu li {
+	display: inline-block;
+	float: center;
+	position: relative;
+}
+
+.menu li a {
+	display: inline-block;
+	line-height: 20px;
+	padding: 6px 12px;
+	margin: 8px 8px;
+	font-size: 20px;
+	vertical-align: middle;
+	text-decoration: none;
+	color: white;
+}
+
+/* .menu li a:hover { */
+/* 	background: -webkit-gradient(linear, center top, center bottom, from(#f00), to(#F8F8F8)); */
+/* 	background-image: linear-gradient(#ededed, #F8F8F8); */
+/* 	background-image: linear-gradient(#f00, #F8F8F8); */
+/* 	border-radius: 50px; */
+/* 	box-shadow: inset 0px 0px 1px 1px rgba(0,0,0,0.1); */
+/* 	color: #222; */
+/* } */
+
+.menu li:nth-child(n) a { background: green; }
+.menu li:nth-child(2n) a { background: blue; }
+.menu li:nth-child(3n) a { background: red; }
+.menu li:nth-child(4n) a { background: purple; }
+.menu li:nth-child(5n) a { background: orange; }
+
+.menu li img {
+	display: inline-block;
+	float: center;
+	position: relative;
+	vertical-align: middle;
+}
+
+.menu li span {
+	display: inline-block;
+	float: center;
+}
+
+
+
+
+/* Dropdown styles */
+
+.menu ul {
+	position: absolute;
+	left: -9999px;
+	list-style: none;
+	opacity: 0;
+	transition: opacity 800ms ease;
+}
+
+.menu ul li {
+	float: right;
+	width: 100%;
+}
+
+.menu ul a {
+	white-space: nowrap;
+}
+
+/* Displays the dropdown on hover and moves back into position */
+
+.menu li:hover ul {
+	background: rgba(255,255,255,1);
+	border-radius: 10px 10px 10px 10px;
+	box-shadow: 0px 2px 4px rgba(0,0,0,0.4);
+	left: 5px;
+	opacity: 1;
+	z-index: 999;
+	color: #222;
+}
+
+/* Persistant Hover State */
+
+.menu li:hover ul a {
+	background: none;
+	border-radius: 0;
+	box-shadow: none;
+	color: #222;
+}
+
+.menu li:hover ul li a:hover {
+	background: -webkit-gradient(linear, center top, center bottom, from(#eee), to(#fff));
+	background-image: linear-gradient(#ededed, #fff);
+	border-radius: 12px;
+	box-shadow: inset 0px 0px 4px 2px rgba(0,0,0,0.3);
+}
+
+
